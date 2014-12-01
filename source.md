@@ -8,10 +8,6 @@
  6. Quaternion Rotations <!-- .element: class="fragment" data-fragment-index="6" -->
  7. Modeling Transformations <!-- .element: class="fragment" data-fragment-index="7" -->
 
- <div id="test-div-markdown">
- <p> THIS IS A RANDOM DIV TO BE FILLED </p>
- </div>
-
 
 
 ## PIPELINE
