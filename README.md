@@ -4,6 +4,8 @@ Part of the *Visual Computing* course given at [National University of Colombia]
 
 Powered by [reveal](https://github.com/hakimel/reveal.js).
 
+Currently being modified to use [Processing.js](http://processingjs.org/) to insert interactive sketches to the slides.
+
 Made possible thanks to... 
 
 <!--- a long list of students and links to their pages. To come ;) -->
