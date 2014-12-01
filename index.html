@@ -24,7 +24,6 @@
 		<script>
 			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
 		</script>
-
 		<!--[if lt IE 9]>
 		<script src="lib/js/html5shiv.js"></script>
 		<![endif]-->
@@ -37,10 +36,10 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 
-                 <section data-markdown="source.md"  
-					 data-separator="^\n\n\n"  
-					 data-vertical="^\n\n"  
-					 data-notes="^Note:"  
+                 <section data-markdown="source.md"
+					 data-separator="^\n\n\n"
+					 data-vertical="^\n\n"
+					 data-notes="^Note:"
 					 data-charset="UTF-8">
 			</section>
 
@@ -81,7 +80,12 @@
 					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
 					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
 					//added by Pierre:
-					{ src: 'plugin/math/math.js', async: true }
+					{ src: 'plugin/math/math.js', async: true },
+					//added by PabloAlejandroGarcia
+					{ src: 'lib/js/processing.js', async: true },
+					{ src: 'sketchs/translateSketch.js', async: true },
+					{ src: 'sketchs/scaleSketch.js', async: true },
+					{ src: 'sketchs/rotateSketch.js', async: true }
 				]
 			});
 //While trrying to fix mathjax with markdown added all three by Pierre:
@@ -94,7 +98,16 @@
 			Reveal.addEventListener( 'fragmenthidden', function( event ) {
 				  // event.fragment = the fragment DOM element
 			} );
-
+			//Added by PabloAlejandroGarcia
+			Reveal.addEventListener( 'translate-state', function() {
+				drawTranslateScript();
+			}, false );
+			Reveal.addEventListener( 'scale-state', function() {
+				drawScaleScript();
+			}, false );
+			Reveal.addEventListener( 'rotate-state', function() {
+				drawRotateScript();
+			}, false );
 		</script>
 
 	</body>

@@ -8,6 +8,10 @@
  6. Quaternion Rotations <!-- .element: class="fragment" data-fragment-index="6" -->
  7. Modeling Transformations <!-- .element: class="fragment" data-fragment-index="7" -->
 
+ <div id="test-div-markdown">
+ <p> THIS IS A RANDOM DIV TO BE FILLED </p>
+ </div>
+
 
 
 ## PIPELINE
@@ -37,11 +41,11 @@ void main(){
 
 
 
-## Two-dimensional transformations 
+## Two-dimensional transformations
 <img height="500" src="fig/image1.JPG">
 
 
-## Two-dimensional transformations 
+## Two-dimensional transformations
 
 <font color="yellow"> Object Transformations vs Coordinate System Transformation</font>
 
@@ -62,14 +66,14 @@ void main(){
 <p align ="right">Vectorially we get:</p>
 </br>
 <p align ="right"><p align ="botton"><font color="#00FFFF">
-$\begin{bmatrix} 
-x \cr 
+$\begin{bmatrix}
+x \cr
 y \end{bmatrix}
-\begin{bmatrix} 
-d_x \cr 
+\begin{bmatrix}
+d_x \cr
 d_y \end{bmatrix}
-\begin{bmatrix} 
-x' \cr 
+\begin{bmatrix}
+x' \cr
 y' \end{bmatrix}$
 </font></p></p>
 </br>
@@ -80,6 +84,11 @@ $
 </font></p></p>
 
 
+<!-- .slide: data-state="translate-state" -->
+##Translation example
+<canvas id="canvas1"></canvas>
+
+
 ## Two-dimensional transformations
 
 <p align ="left"><font color="yellow">Scaling</font></p>
@@ -87,14 +96,14 @@ $
 <p align ="right">Vectorially we get:</p>
 </br>
 <p align ="right"><p align ="botton"><font color="#00FFFF">
-$\begin{bmatrix} 
-x \cr 
+$\begin{bmatrix}
+x \cr
 y \end{bmatrix}
-\begin{bmatrix} 
-s_x & 0 \cr 
+\begin{bmatrix}
+s_x & 0 \cr
 0 & s_y \end{bmatrix}
-\begin{bmatrix} 
-x' \cr 
+\begin{bmatrix}
+x' \cr
 y' \end{bmatrix}$
 </font></p></p>
 </br>
@@ -103,6 +112,11 @@ $
 P'= S * P
 $
 </font></p></p>
+
+
+<!-- .slide: data-state="scale-state" -->
+##Scaling example
+<canvas id="canvas2"></canvas>
 
 
 ## Two-dimensional transformations
@@ -123,14 +137,14 @@ $
 <font size ="5">Vectorially we get:</font>
 </br>
 <font size ="5" color="#00FFFF">
-$\begin{bmatrix} 
-x \cr 
+$\begin{bmatrix}
+x \cr
 y \end{bmatrix}
-\begin{bmatrix} 
-cos\beta & -sin \beta  \cr 
+\begin{bmatrix}
+cos\beta & -sin \beta  \cr
 sin\beta & cos \beta \end{bmatrix}
-\begin{bmatrix} 
-x' \cr 
+\begin{bmatrix}
+x' \cr
 y' \end{bmatrix}$
 </font>
 </br>
@@ -141,7 +155,7 @@ $
 </font>
 </td>
 </tr>
-</table> 
+</table>
 <p align ="left"><font color="yellow">Rotation</font></p>
 </font></p>
 <p align ="left"><font size ="6">From the triangulation:</font></p>
@@ -165,6 +179,11 @@ $\boxed {y'= xsin \beta + ycos \beta}$
 </font></p>
 
 
+<!-- .slide: data-state="rotate-state" -->
+##Rotation example
+<canvas id="canvas3"></canvas>
+
+
 ## Two-dimensional transformations
 <p align ="left"><font color="red">Shearing</font></p>
 <img height="250" src="fig/image8.JPG">
@@ -173,11 +192,11 @@ $x' = x + h *y, y'=y$
 <p align ="left">, where h is the shearing parameter, to obtain:</p>
 <font size ="5" color="yellow">
 $
-D_x=\begin{bmatrix} 
-1 & h \cr 
+D_x=\begin{bmatrix}
+1 & h \cr
 0 & 1 \end{bmatrix}
-D_y=\begin{bmatrix} 
-1 & 0 \cr 
+D_y=\begin{bmatrix}
+1 & 0 \cr
 h & 1 \end{bmatrix}
 P'= {D_x} * P
 $
@@ -193,41 +212,41 @@ $
 <br/>
 <p><font size ="5" color="yellow">
 $
-T=\begin{bmatrix} 
-d_x \cr 
+T=\begin{bmatrix}
+d_x \cr
 d_y \end{bmatrix}
 $
 </font></p>
 <br/>
 <p><font size ="5" color="#00FFFF">
 $
-S=\begin{bmatrix} 
-s_x & 0 \cr 
+S=\begin{bmatrix}
+s_x & 0 \cr
 0 & s_y \end{bmatrix}
 $
 </font></p>
 <br/>
 <p><font size ="5">
 $
-R=\begin{bmatrix} 
-cos\beta & -sin \beta  \cr 
+R=\begin{bmatrix}
+cos\beta & -sin \beta  \cr
 sin \beta & cos \beta \end{bmatrix}
 $
 </font></p>
 <br/>
 <p><font size ="5" color="red">
 $
-D_x=\begin{bmatrix} 
-1 & h \cr 
+D_x=\begin{bmatrix}
+1 & h \cr
 0 & 1 \end{bmatrix}
-D_y=\begin{bmatrix} 
-1 & 0 \cr 
+D_y=\begin{bmatrix}
+1 & 0 \cr
 h & 1 \end{bmatrix}
 $
 </font></p>
 </td>
 </tr>
-</table> 
+</table>
 
 <p align ="left"><font color="blue">Trasformations Summary</font></p>
 <p align ="left"><font color="yellow" size ="6">Translation</font></p>
@@ -249,12 +268,12 @@ $P'=D{}_{(x/y)}*P$
 
 
 
-## Types of Transformations 
+## Types of Transformations
 
 <p align ="left"><font color="#00FFFF">1. Linear</font></p>
 <p align ="left">
 $
-F(a+b)= F(a)+ F(b), 
+F(a+b)= F(a)+ F(b),
 $
 $
 F(\lambda a) = \lambda F(a)\rightarrow F(0) = 0
@@ -267,7 +286,7 @@ $
 Linear $+$ Translation $\rightarrow p' = M\ast p + b $
 </p>
 <p align ="left"><font color="#00FFFF">3. Invertibles</font></p>
-<p align ="center"> 
+<p align ="center">
 Lets take a look at <font color="red">$M^{-1}$ </font>, the inverse matrix of the general transformation matrix <font color="red">$M$</font>
 </p>
 $
@@ -318,7 +337,7 @@ $
 </font>
 
 
-## Summary 
+## Summary
 <table width="350" heigth="500" border="0" align ="right">
 <tr>
 <td>
@@ -326,26 +345,26 @@ $
 <br/>
 <p><font size ="4" color="yellow">
 $
-T=\begin{bmatrix} 
+T=\begin{bmatrix}
 1 & 0 & d_x \cr
-0 & 1 & d_y \cr 
+0 & 1 & d_y \cr
 0 & 0 & 1 \end{bmatrix}
 $
 </font></p>
 <br/>
 <p><font size ="4" color="#00FFFF">
 $
-S=\begin{bmatrix} 
+S=\begin{bmatrix}
 s_x & 0 & 0 \cr
-0 & s_y & 0 \cr 
+0 & s_y & 0 \cr
 0 & 0 & 1 \end{bmatrix}
 $
 </font></p>
 <br/>
 <p><font size ="4">
 $
-R=\begin{bmatrix} 
-cos\beta & -sin \beta & 0  \cr 
+R=\begin{bmatrix}
+cos\beta & -sin \beta & 0  \cr
 sin \beta & cos \beta & 0  \cr
 0 & 0 & 1\end{bmatrix}
 $
@@ -353,31 +372,31 @@ $
 <br/>
 <p><font size ="4" color="red">
 $
-D_x=\begin{bmatrix} 
+D_x=\begin{bmatrix}
 1 & h & 0\cr
-0 & 1 & 0\cr 
+0 & 1 & 0\cr
 0 & 0 & 1 \end{bmatrix}
-D_y=\begin{bmatrix} 
-1 & 0 & 0 \cr 
-h & 1 & 0 \cr 
+D_y=\begin{bmatrix}
+1 & 0 & 0 \cr
+h & 1 & 0 \cr
 0 & 0 & 1\end{bmatrix}
 $
 </font></p>
 </td>
 </tr>
-</table> 
+</table>
 
 <p align ="left"><font color="blue" size="4">
 $
-P'=\begin{bmatrix} 
-x' \cr 
-y' \cr 
+P'=\begin{bmatrix}
+x' \cr
+y' \cr
 1\end{bmatrix}
 $
 $
-P=\begin{bmatrix} 
-x \cr 
-y \cr 
+P=\begin{bmatrix}
+x \cr
+y \cr
 1\end{bmatrix}
 $
 </font></p>
@@ -405,14 +424,14 @@ $P'=D_x*P$
 <table width="650" heigth="500" border="0" align ="right">
 <tr>
 <td>
-<p align ="left"><font size="4"> 
+<p align ="left"><font size="4">
 Lets take a look at <font color="red">$M^{-1}$ </font>, the inverse matrix of the general transformation matrix <font color="red">$M$</font></font>
 </p>
 </td>
 </tr>
 <tr>
 <td>
-<font size="4"> 
+<font size="4">
 $
 P'= M\ast P,\space \space \space \space \space \space \space  M^{-1}P' = M^{-1}M P
 $
@@ -425,53 +444,53 @@ $
 
 <p><font size ="4" color="yellow">
 $
-T=\begin{bmatrix} 
+T=\begin{bmatrix}
 1 & 0 & d_x \cr
-0 & 1 & d_y \cr 
+0 & 1 & d_y \cr
 0 & 0 & 1 \end{bmatrix}
 $
 
 $
-T^{-1}=\begin{bmatrix} 
+T^{-1}=\begin{bmatrix}
 1 & 0 & -d_x \cr
-0 & 1 & -d_y \cr 
+0 & 1 & -d_y \cr
 0 & 0 & 1 \end{bmatrix}
 $
 </font></p>
 <br/>
 <p><font size ="4" color="#00FFFF">
 $
-S=\begin{bmatrix} 
+S=\begin{bmatrix}
 s_x & 0 & 0 \cr
-0 & s_y & 0 \cr 
+0 & s_y & 0 \cr
 0 & 0 & 1 \end{bmatrix}
 $
 $
-S^{-1}=\begin{bmatrix} 
+S^{-1}=\begin{bmatrix}
 \frac 1s_x & 0 & 0 \cr
-0 & \frac 1s_y & 0 \cr 
+0 & \frac 1s_y & 0 \cr
 0 & 0 & 1 \end{bmatrix}
 $
 </font></p>
 
 </tr>
 </td>
-</table> 
+</table>
 <table width="310" heigth="500" border="0" align ="left">
 <tr>
 <td>
-<br/> 
+<br/>
 <p align ="left"><font color="blue" size="5">
 $
 P'=\begin{bmatrix}
-x' \cr 
-y' \cr 
+x' \cr
+y' \cr
 1\end{bmatrix}
 $
 $
-P=\begin{bmatrix} 
-x \cr 
-y \cr 
+P=\begin{bmatrix}
+x \cr
+y \cr
 1\end{bmatrix}
 $
 </font></p>
@@ -483,7 +502,7 @@ $P' = T(d_x,d_y)\ast P $
 <p align ="left"><font size ="5" color="#00FFFF">
 $P' = T(s_x,s_y)\ast P $
 </font></p>
-</table> 
+</table>
 
 
 ##Homogeneous coordinates
@@ -500,8 +519,8 @@ P'= R(\beta)\ast P
 \space
 $
 $
-R=\begin{bmatrix} 
-cos\beta & -sin \beta & 0  \cr 
+R=\begin{bmatrix}
+cos\beta & -sin \beta & 0  \cr
 sin \beta & cos \beta & 0  \cr
 0 & 0 & 1\end{bmatrix}
 $
@@ -510,12 +529,12 @@ $
 <br/>
 <font color="#00FFFF" size ="5">
 $
-R=\begin{bmatrix} 
-cos (-\beta) & -sin (-\beta) & 0  \cr 
+R=\begin{bmatrix}
+cos (-\beta) & -sin (-\beta) & 0  \cr
 sin (-\beta) & cos (-\beta) & 0  \cr
 0 & 0 & 1\end{bmatrix}
-=\begin{bmatrix} 
-cos\beta & sin \beta & 0  \cr 
+=\begin{bmatrix}
+cos\beta & sin \beta & 0  \cr
 -sin \beta & cos \beta & 0  \cr
 0 & 0 & 1\end{bmatrix}
 $
@@ -664,8 +683,8 @@ $P'= S\ast T'\ast R\ast T\ast P$
 <br/>
 <font color="yellow" size ="5">
 $
-\begin{bmatrix} 
-1 & 0 & x_r  \cr 
+\begin{bmatrix}
+1 & 0 & x_r  \cr
 0 & 1 & y_r  \cr
 0 & 0 & 1\end{bmatrix}
 $
@@ -675,8 +694,8 @@ $
 $
 <font size ="5">
 $
-\begin{bmatrix} 
-cos\beta & -sin\beta & 0  \cr 
+\begin{bmatrix}
+cos\beta & -sin\beta & 0  \cr
 sin\beta & cos\beta & 0  \cr
 0 & 0 & 1\end{bmatrix}
 $
@@ -686,8 +705,8 @@ $
 $
 <font color="yellow" size ="5">
 $
-\begin{bmatrix} 
-1 & 0 & -x_r  \cr 
+\begin{bmatrix}
+1 & 0 & -x_r  \cr
 0 & 1 & -y_r  \cr
 0 & 0 & 1\end{bmatrix}
 $
@@ -697,8 +716,8 @@ $
 
 <font color="#2EFE2E" size ="5">
 $
-=\begin{bmatrix} 
-cos\beta & -sin\beta & x_r(1-cos\beta)+y_rsin\beta  \cr 
+=\begin{bmatrix}
+cos\beta & -sin\beta & x_r(1-cos\beta)+y_rsin\beta  \cr
 sin\beta & cos\beta & y_r(1-cos\beta)-x_rsin\beta  \cr
 0 & 0 & 1\end{bmatrix}$
 </font>
@@ -722,8 +741,8 @@ sin\beta & cos\beta & y_r(1-cos\beta)-x_rsin\beta  \cr
 <br/>
 <font color="yellow" size ="5">
 $
-\begin{bmatrix} 
-1 & 0 & x_f  \cr 
+\begin{bmatrix}
+1 & 0 & x_f  \cr
 0 & 1 & y_f  \cr
 0 & 0 & 1\end{bmatrix}
 $
@@ -733,8 +752,8 @@ $
 $
 <font color="#00FFFF" size ="5">
 $
-\begin{bmatrix} 
-s_x & 0 & 0  \cr 
+\begin{bmatrix}
+s_x & 0 & 0  \cr
 0 & s_y & 0  \cr
 0 & 0 & 1\end{bmatrix}
 $
@@ -744,8 +763,8 @@ $
 $
 <font color="yellow" size ="5">
 $
-\begin{bmatrix} 
-1 & 0 & -x_f  \cr 
+\begin{bmatrix}
+1 & 0 & -x_f  \cr
 0 & 1 & -y_f  \cr
 0 & 0 & 1\end{bmatrix}
 $
@@ -755,8 +774,8 @@ $
 
 <font color="#2EFE2E" size ="5">
 $
-=\begin{bmatrix} 
-s_x & 0 & x_f(1-s_x)  \cr 
+=\begin{bmatrix}
+s_x & 0 & x_f(1-s_x)  \cr
 0 & s_y & y_f(1-s_y)  \cr
 0 & 0 & 1\end{bmatrix}$
 </font>
@@ -785,8 +804,8 @@ s_x & 0 & x_f(1-s_x)  \cr
 <br/>
 <font color="#2EFE2E" size ="6">
 $
-\begin{bmatrix} 
-s_1 cos^2\beta + s_2 sin^2\beta & (s_2-s_1)cos\beta sin\beta & 0  \cr 
+\begin{bmatrix}
+s_1 cos^2\beta + s_2 sin^2\beta & (s_2-s_1)cos\beta sin\beta & 0  \cr
 (s_2-s_1)cos\beta sin\beta & s_1 sin^2\beta + s_2 cos^2\beta & 0  \cr
 0 & 0 & 1\end{bmatrix}$
 </font>
@@ -802,23 +821,23 @@ s_1 cos^2\beta + s_2 sin^2\beta & (s_2-s_1)cos\beta sin\beta & 0  \cr
 <img height="400" src="fig/image16.JPG" align ="left">
 <p align ="left"><font size="5">Vectorially we get:</font></p>
 <p align ="right"><p align ="botton"><font color="#2EFE2E" size ="5">
-$\begin{bmatrix} 
+$\begin{bmatrix}
 x \cr
-y \cr 
+y \cr
 z \end{bmatrix}
 $
 </font>
 <font color="yellow" size ="5">
-$\begin{bmatrix} 
+$\begin{bmatrix}
 d_x \cr
-d_y \cr 
+d_y \cr
 d_z \end{bmatrix}
 $
 </font>
 <font color="#00FFFF" size ="5">
-$\begin{bmatrix} 
+$\begin{bmatrix}
 x' \cr
-y' \cr 
+y' \cr
 z' \end{bmatrix}$
 </font></p></p>
 <p align ="right"><p align ="botton">
@@ -826,28 +845,28 @@ z' \end{bmatrix}$
 </p></p>
 <p align ="left"><font size="5">In homogeneous coordinates we get:</font></p>
 <p align ="right"><p align ="botton"><font color="#2EFE2E" size ="5">
-$\begin{bmatrix} 
+$\begin{bmatrix}
 x \cr
 y \cr
-z \cr 
+z \cr
 1 \end{bmatrix}
 $
 </font>
 <font color="yellow" size ="5">
 $
-\begin{bmatrix} 
+\begin{bmatrix}
 1 & 0 & 0 & d_x \cr
 0 & 1 & 0 & d_y \cr
-0 & 0 & 1 & d_z \cr 
+0 & 0 & 1 & d_z \cr
 0 & 0 & 0 & 1 \end{bmatrix}
 $
 </font>
 <font color="#00FFFF" size ="5">
 $
-\begin{bmatrix} 
+\begin{bmatrix}
 x' \cr
 y' \cr
-z' \cr 
+z' \cr
 1 \end{bmatrix}$
 </font></p></p>
 <p align ="right"><p align ="botton">
@@ -865,23 +884,23 @@ z' \cr
 <img height="400" src="fig/image18.JPG" align ="left">
 <p align ="left"><font size="5">Vectorially we get:</font></p>
 <p align ="right"><p align ="botton"><font color="#2EFE2E" size ="5">
-$\begin{bmatrix} 
+$\begin{bmatrix}
 x \cr
-y \cr 
+y \cr
 z \end{bmatrix}
 $
 </font>
 <font color="#00FFFF" size ="5">
-$\begin{bmatrix} 
+$\begin{bmatrix}
 s_x & 0 & 0 \cr
-0 & s_y & 0 \cr 
+0 & s_y & 0 \cr
 0 & 0 & s_z \end{bmatrix}
 $
 </font>
 <font size ="5">
-$\begin{bmatrix} 
+$\begin{bmatrix}
 x' \cr
-y' \cr 
+y' \cr
 z' \end{bmatrix}$
 </font></p></p>
 <p align ="right"><p align ="botton">
@@ -889,28 +908,28 @@ z' \end{bmatrix}$
 </p></p>
 <p align ="left"><font size="5">In homogeneous coordinates we get:</font></p>
 <p align ="right"><p align ="botton"><font color="#2EFE2E" size ="5">
-$\begin{bmatrix} 
+$\begin{bmatrix}
 x \cr
 y \cr
-z \cr 
+z \cr
 1 \end{bmatrix}
 $
 </font>
 <font color="#00FFFF" size ="5">
 $
-\begin{bmatrix} 
+\begin{bmatrix}
 s_x & 0 & 0 & 0 \cr
 0 & s_y & 0 & 0 \cr
-0 & 0 & s_z & 0 \cr 
+0 & 0 & s_z & 0 \cr
 0 & 0 & 0 & 1 \end{bmatrix}
 $
 </font>
 <font size ="5">
 $
-\begin{bmatrix} 
+\begin{bmatrix}
 x' \cr
 y' \cr
-z' \cr 
+z' \cr
 1 \end{bmatrix}$
 </font></p></p>
 <p align ="right"><p align ="botton">
@@ -935,28 +954,28 @@ z' \cr
 </p></p>
 <p align ="left"><font size="5">In homogeneous coordinates we get:</font></p>
 <p align ="right"><p align ="botton"><font size ="5">
-$\begin{bmatrix} 
+$\begin{bmatrix}
 x \cr
 y \cr
-z \cr 
+z \cr
 1 \end{bmatrix}
 $
 </font>
 <font size ="5">
 $
-\begin{bmatrix} 
+\begin{bmatrix}
 cos \beta & -sin \beta & 0 & 0 \cr
 sin \beta & cos \beta & 0 & 0 \cr
-0 & 0 & 1 & 0 \cr 
+0 & 0 & 1 & 0 \cr
 0 & 0 & 0 & 1 \end{bmatrix}
 $
 </font>
 <font size ="5">
 $
-\begin{bmatrix} 
+\begin{bmatrix}
 x' \cr
 y' \cr
-z' \cr 
+z' \cr
 1 \end{bmatrix}$
 </font></p></p>
 <p align ="right"><p align ="botton">
@@ -970,28 +989,28 @@ $P' = R \ast P$
 <p align ="left"><font size="5">Doing $y \rightarrow z \rightarrow x \rightarrow y$</font></p>
 <p align ="left"><font size="5">In homogeneous coordinates we get:</font></p>
 <p align ="right"><p align ="botton"><font size ="5">
-$\begin{bmatrix} 
+$\begin{bmatrix}
 x \cr
 y \cr
-z \cr 
+z \cr
 1 \end{bmatrix}
 $
 </font>
 <font size ="5">
 $
-\begin{bmatrix} 
+\begin{bmatrix}
 1 & 0 & 0 & 0 \cr
 0 & cos \beta & -sin \beta & 0 \cr
-0 & sin\beta & cos\beta & 0 \cr 
+0 & sin\beta & cos\beta & 0 \cr
 0 & 0 & 0 & 1 \end{bmatrix}
 $
 </font>
 <font size ="5">
 $
-\begin{bmatrix} 
+\begin{bmatrix}
 x' \cr
 y' \cr
-z' \cr 
+z' \cr
 1 \end{bmatrix}$
 </font></p></p>
 <p align ="right"><p align ="botton">
@@ -1005,28 +1024,28 @@ $P' = R \ast P$
 <p align ="left"><font size="5">Doing $y \rightarrow z \rightarrow x \rightarrow y$</font></p>
 <p align ="left"><font size="5">In homogeneous coordinates we get:</font></p>
 <p align ="right"><p align ="botton"><font size ="5">
-$\begin{bmatrix} 
+$\begin{bmatrix}
 x \cr
 y \cr
-z \cr 
+z \cr
 1 \end{bmatrix}
 $
 </font>
 <font size ="5">
 $
-\begin{bmatrix} 
+\begin{bmatrix}
 cos\beta & 0 & sen\beta & 0 \cr
 0 & 1 & 0 & 0 \cr
--sin\beta & 0 & cos\beta & 0 \cr 
+-sin\beta & 0 & cos\beta & 0 \cr
 0 & 0 & 0 & 1 \end{bmatrix}
 $
 </font>
 <font size ="5">
 $
-\begin{bmatrix} 
+\begin{bmatrix}
 x' \cr
 y' \cr
-z' \cr 
+z' \cr
 1 \end{bmatrix}$
 </font></p></p>
 <p align ="right"><p align ="botton">
@@ -1047,7 +1066,7 @@ $P' = R \ast P$
 <p align ="left">1st step. Rotation parameter specifications</p>
 <img height="400" src="fig/image25.JPG" align ="left">
 <p>
-$ 
+$
 V = P_2 - P_1
 $
 </p>
@@ -1063,10 +1082,10 @@ $
 <img height="400" src="fig/image26.JPG" align ="left">
 </br>
 <p><font color = "yellow">
-$T=\begin{bmatrix} 
+$T=\begin{bmatrix}
 1 & 0 & 0 & -x_1  \cr
 0 & 1 & 0 & -y_1 \cr
-0 & 0 & 1 & -z_1 \cr 
+0 & 0 & 1 & -z_1 \cr
 0 & 0 & 0 & 1 \end{bmatrix}
 $
 </font>
@@ -1090,16 +1109,16 @@ $
 <td>
 </br>
 <font size ="5">
-$R_x(\alpha)=\begin{bmatrix} 
+$R_x(\alpha)=\begin{bmatrix}
 1 & 0 & 0 & 0  \cr
 0 & \frac cd & -\frac bd & 0 \cr
-0 & \frac bd & \frac cd & 0 \cr 
+0 & \frac bd & \frac cd & 0 \cr
 0 & 0 & 0 & 1 \end{bmatrix}
-$ 
+$
 </font>
 </td>
 </tr>
-</table> 
+</table>
 <p align ="left"><font size ="5">We get:</font></p>
 <p align ="left"><font size ="5" color="#2EFE2E">$u$</font>$=$<font size ="5" color="#2EFE2E"> $(a,b,c)$</font>. <font size ="5">From u projection in y-z plane:</font></p>
 <p align ="left"><font size ="5" color="#00FFFF">$u'$</font>$=$<font size ="5" color="#00FFFF"> $(0,b,c)$</font>. <font size ="5"><font size ="5" color="#2EFE2E">$\alpha$</font> is the angle between<font color="#00FFFF"> $u'$ </font> y <font size ="5" color="yellow"> $u_z$</font>$\rightarrow$</font></p>
@@ -1127,16 +1146,16 @@ $
 <td>
 </br>
 <font size ="5">
-$R_y(\lambda)=\begin{bmatrix} 
+$R_y(\lambda)=\begin{bmatrix}
 d & 0 & -a & 0  \cr
 0 & 1 & 0 & 0 \cr
-a & 0 & d & 0 \cr 
+a & 0 & d & 0 \cr
 0 & 0 & 0 & 1 \end{bmatrix}
-$ 
+$
 </font>
 </td>
 </tr>
-</table> 
+</table>
 <p align ="left"><font size ="5">We get:</font></p>
 <p align ="left"><font size ="5" color="#2EFE2E">$u$</font><font size ="5">$=$</font><font size ="5" color="#2EFE2E"> $(a,b,c)$</font>. <font size ="5">From u projection in y-z plane:</font></p>
 
@@ -1163,12 +1182,12 @@ $
 ##Rotations
 <img height="250" src="fig/image30.JPG">
 <p align ="center"><font size ="5">
-$R_z(\beta)=\begin{bmatrix} 
+$R_z(\beta)=\begin{bmatrix}
 cos \beta & -sin \beta & 0 & 0  \cr
 sin  \beta & cos \beta & 0 & 0 \cr
-0 & 0 & 1 & 0 \cr 
+0 & 0 & 1 & 0 \cr
 0 & 0 & 0 & 1 \end{bmatrix}
-$ 
+$
 $R_x$<font color="#2EFE2E">$(\alpha)^{-1}$</font>$\bullet R_y$<font color="#2EFE2E">$(\lambda)^{-1}$</font><font color="yellow">$T^{-1}$</font>
 </font>
 </p>
@@ -1232,12 +1251,12 @@ $R(\beta)=$<font color="yellow">$T^{-1}$</font>$\bullet R_x$<font color="#2EFE2E
 </font>
 
 <font size = 5>
-$R=\begin{bmatrix} 
+$R=\begin{bmatrix}
 u_x'1 & u_x'2 & u_x'3 & 0  \cr
 u_y'1 & u_y'2 & u_y'3 & 0 \cr
-u_z'1 & u_z'1 & u_z'1 & 0 \cr 
+u_z'1 & u_z'1 & u_z'1 & 0 \cr
 0 & 0 & 0 & 1 \end{bmatrix}
-$ 
+$
 </font>
 
 
@@ -1534,13 +1553,13 @@ between spatial orientations</font>.</p>
 
 <font size = 3>
 <p align ="left">
-$M_R(\beta)=\begin{bmatrix} 
+$M_R(\beta)=\begin{bmatrix}
 1-2b^2-2c^2 & 2ab-2sc & 2ac+2sb & 0  \cr
 2ab+2sc & 1-2a^2-2c^2 & 2bc-2sa & 0 \cr
-2ac-2sb & 2bc+2sa & 1-sa^2-2b^2 & 0 \cr 
+2ac-2sb & 2bc+2sa & 1-sa^2-2b^2 & 0 \cr
 0 & 0 & 0 & 1 \end{bmatrix}
 $
-</p> 
+</p>
 </font>
 
 </br>
@@ -1552,19 +1571,19 @@ $
 
 
 
-##Shear 
+##Shear
 <p align ="left">Three-dimensional<font color="#2EFE2E">/ respect to z-axis</font></p>
 <img width ="800" height="300" src="fig/image39.JPG">
 <table width="800" heigth="500" border="0">
 <tr>
 <td>
 <font size = 5>
-$D_z=\begin{bmatrix} 
+$D_z=\begin{bmatrix}
 1 & 0 & a & 0  \cr
 0 & 1 & b & 0 \cr
-0 & 0 & 1 & 0 \cr 
+0 & 0 & 1 & 0 \cr
 0 & 0 & 0 & 1 \end{bmatrix}
-\space \space \space 
+\space \space \space
 $
 </font>
 </td>
@@ -1616,12 +1635,12 @@ $
 </br>
 </br>
 <font size = 5>
-$R=\begin{bmatrix} 
+$R=\begin{bmatrix}
 u_x'1 & u_x'2 & u_x'3 & 0  \cr
 u_y'1 & u_y'2 & u_y'3 & 0 \cr
-u_z'1 & u_z'1 & u_z'1 & 0 \cr 
+u_z'1 & u_z'1 & u_z'1 & 0 \cr
 0 & 0 & 0 & 1 \end{bmatrix}
-$ 
+$
 </font>
 
 
@@ -1652,18 +1671,3 @@ $
 
 <img width ="600" height="350" src="fig/image43.JPG" align ="left">
 <img src="fig/image45.JPG" align ="right">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
