@@ -103,10 +103,11 @@ var canvas = document.getElementById("my-canvas");
 var p = new Processing(canvas, sketch);
 ```
 
+To add another library that uses an empty canvas (that does not create the canvas element) like, for example [Chessboard.js](http://chessboardjs.com/), follow steps 1-5 and on the two last steps, refer to the library on how to write its scripts and attach them to the canvas.
 
 <!---
 
-9. Update to upstream
+9. Update to upstream
 
  ```sh
  $ git remote add reveal.js https://github.com/hakimel/reveal.js.git
